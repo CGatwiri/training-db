@@ -1,0 +1,208 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainings</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/local.css" />
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/transition.js"></script>   
+	<link rel="stylesheet" type="text/css" href="css/stylin.css">
+
+      <style>
+
+        div {
+            padding-bottom:20px;
+        }
+
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+			function validation()
+			{
+				if(document.registerTrainingForm.trainingID.value == ""  )
+				{
+					alert("Please enter Training ID");
+					return false;
+				}
+				if(document.registerTrainingForm.trainingName.value == "")
+				{
+					alert("Please enter Training Name");
+					return false;
+				}
+				if(document.registerTrainingForm.trainingType.value == "" )
+				{
+					alert("Please enter Training Type");
+					return false;
+				}
+				if(document.registerTrainingForm.trainingVenue.value == "" )
+				{
+					alert("Please enter Training Venue");
+					return false;
+				}
+				if(document.registerTrainingForm.trainingDate.value == "" )
+				{
+					alert("Please enter Training Date");
+					return false;
+				}
+				if(document.registerTrainingForm.trainerName.value == "" )
+				{
+					alert("Please enterTrainer's Name");
+					return false;
+				}
+				if(document.registerTrainingForm.trainerEmailaddress.value == "" )
+				{
+					alert("Please enter Trainer's Email Address");
+					return false;
+				}
+			}
+</script>
+
+    <div id="wrapper">
+       <div>
+        <div class="row text-center" style="padding-top:80px;">
+            <h2>Register a new training</h2>
+        </div>
+	<form name="registerTrainingForm" action="registerTraining.php" onsubmit="return (validation());" method="post">
+        <div>
+            <label for="trainingID" class="col-md-2">
+                Training ID:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="trainingID" id="trainingID" placeholder="Enter Training ID">
+            </div>
+            <div class="col-md-1">
+                <i class="fa fa-lock fa-2x"></i>
+            </div>
+        </div>       
+		<div>
+            <label for="trainingName" class="col-md-2">
+                Name of Training:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="trainingName" id="trainingName" placeholder="Enter the name of the training">
+            </div>
+             <div class="col-md-1">
+                <i class="fa fa-lock fa-2x"></i>
+            </div>
+        </div>
+		<div>
+            <label for="trainingType" class="col-md-2">
+                Type of Training:
+            </label>
+            <div class="col-md-9">
+                <select name="trainingType" id="trainingType" class="form-control">
+                    <option>--Please Select--</option>
+                    <option>Professional</option>
+                    <option>Progress</option>
+                    <option>Skills/Competence</option>
+                </select>
+            </div>            
+        </div>		
+        <div>
+            <label for="trainingVenue" class="col-md-2">
+                Training Venue:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="trainingVenue" id="trainingVenue" placeholder="Enter Training Venue">
+            </div>
+             <div class="col-md-1">
+                <i class="fa fa-lock fa-2x"></i>
+            </div>
+        </div>
+		<div>
+            <label for="trainingDate" class="col-md-2">
+                Training Date:
+            </label>
+            <div class="col-md-9">
+                <input type="date" class="form-control" name="trainingDate" id="trainingDate" placeholder="Enter Date of the Training">
+            </div>
+             <div class="col-md-1">
+                <i class="fa fa-lock fa-2x"></i>
+            </div>
+        </div>
+        
+        <div>
+            <label for="trainerName" class="col-md-2">
+                Trainer's Name
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="trainerName" id="trainerName" placeholder="Enter name of the trainer">
+            </div>
+             <div class="col-md-1">
+                <i class="fa fa-lock fa-2x"></i>
+            </div>
+        </div>
+        <div>
+            <label for="trainerEmailaddress" class="col-md-2">
+                Trainer Email Address:
+            </label>
+            <div class="col-md-9">
+                <input type="email" class="form-control" name="trainerEmailaddress" id="trainerEmailaddress" placeholder="Enter Trainer's Email Address">
+                <p class="help-block">
+                    Example: yourname@domain.com
+                </p>
+            </div>
+             <div class="col-md-1">
+                <i class="fa fa-lock fa-2x"></i>
+            </div>
+        </div>
+        <div>
+            <div class="col-md-2">
+            </div>          
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-10">
+                <button class="login100-form-btn" type="submit" onclick="javascript:this.parentNode.submit();">
+							Submit Details
+				</button>
+            </div>
+        </div>
+		</form>
+    </div>  
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="boom.html">Back to Home</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li><a href="registerEmployee.html"><i class="fa fa-bullseye"></i> Register Employee</a></li>
+                    <li><a href="editEmployee.html"><i class="fa fa-font"></i> Edit Employee Record</a></li>       
+                    <li><a href="registerTraining.html"><i class="fa fa-list-ol"></i> Register Training </a></li>       
+                    <li><a href="editTraining.html"><i class="fa fa-tasks"></i> Edit Training Record</a></li>
+					<li><a href="trainingLog.html"><i class="fa fa-tasks"></i> Add New Training Log</a></li>
+					<li><a href="reports.html"><i class="fa fa-tasks"></i>Reports</a></li>
+					
+                </ul>
+                <ul class="nav navbar-nav navbar-right navbar-user">
+                     <li class="dropdown user-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Christine Gatwiri<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+</body>
+</html>

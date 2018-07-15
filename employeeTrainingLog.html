@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainings</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/local.css" />
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/transition.js"></script>   
+	<link rel="stylesheet" type="text/css" href="css/stylin.css">
+
+      <style>
+
+        div {
+            padding-bottom:20px;
+        }
+
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+			function validation()
+			{
+				if(document.registerTrainingForm.trainingLogID.value == ""  )
+				{
+					alert("Please enter Training Log ID");
+					return false;
+				}
+				if(document.registerTrainingForm.trainingID.value == "")
+				{
+					alert("Please enter Training ID");
+					return false;
+				}
+				if(document.registerTrainingForm.employeeID.value == "" )
+				{
+					alert("Please enter Employee ID");
+					return false;
+				}
+			}
+</script>
+
+    <div id="wrapper">
+       <div>
+        <div class="row text-center" style="padding-top:80px;">
+            <h2>Register Staff Training</h2>
+        </div>
+	<form name="employeeTrainingForm" action="trainingLog.php" onsubmit="return (validation());" method="post">
+        <div>
+            <label for="trainingLogID" class="col-md-2">
+                Training Log ID:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="trainingLogID" id="trainingLogID" placeholder="Enter Training Log ID">
+            </div>
+            <div class="col-md-1">
+                <i class="fa fa-lock fa-2x"></i>
+            </div>
+        </div>   
+		
+		<div>
+            <label for="trainingID" class="col-md-2">
+                Training ID:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="trainingID" id="trainingID" placeholder="Enter Training ID">
+            </div>
+             <div class="col-md-1">
+                <i class="fa fa-lock fa-2x"></i>
+            </div>
+        </div>
+		
+		<div>
+            <label for="employeeID" class="col-md-2">
+                Employee ID:
+            </label>
+            <div class="col-md-9">
+                <input type="text" name="employeeID" id="employeeID" class="form-control" placeholder="Enter Employee ID">
+            </div>   
+			<div class="col-md-1">
+                <i class="fa fa-lock fa-2x"></i>
+            </div>			
+        </div>	
+		
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-10">
+                <button class="login100-form-btn" type="submit" onclick="javascript:this.parentNode.submit();">
+							Submit Details
+				</button>
+            </div>
+        </div>
+		</form>
+    </div>  
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="boom.html">Back to Home</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li><a href="registerEmployee.html"><i class="fa fa-bullseye"></i> Register Employee</a></li>
+                    <li><a href="editEmployee.html"><i class="fa fa-font"></i> Edit Employee Record</a></li>       
+                    <li><a href="registerTraining.html"><i class="fa fa-list-ol"></i> Register Training </a></li>       
+                    <li><a href="editTraining.html"><i class="fa fa-tasks"></i> Edit Training Record</a></li>
+					<li><a href="trainingLog.html"><i class="fa fa-tasks"></i> Add New Training Log</a></li>
+					<li><a href="reports.html"><i class="fa fa-tasks"></i>Reports</a></li>
+					
+                </ul>
+                <ul class="nav navbar-nav navbar-right navbar-user">
+                     <li class="dropdown user-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Christine Gatwiri<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+</body>
+</html>
